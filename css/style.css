@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 2.5rem;
+}
+
+.logo img {
+    width: 75%;
+}
+
+.menu ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    display: inline-block;
+    color: #000;
+    margin: 0 1rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0.1875rem;
+    left: 0;
+    bottom: -0.25rem;
+    background: #000;
+    transition: all 0.3s ease;
+}
+
+.menu ul li a:hover::after {
+    width: 100%;
+}
+
+.header-button a {
+    text-decoration: none;
+    font-size: 0.9375rem;
+    margin: 0 1rem;
+    color: #000;
+    font-weight: 500;
+
+}
+
+.login-btn {
+    border: none;
+    background: #54B8FF;
+    color: #fff;
+    padding: 0.6rem 1.875rem
+}
+
+.main-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 3.125rem 3.5rem;
+}
+
+.main-content {
+    width: 700px;
+}
+
+.hero-img img{
+    width: 100%;
+}
+@font-face {
+    font-family: "Poppins-Thin";
+    src: url(./Poppins-Thin.ttf);
+}
+.main-content h5 {
+    font-family: 'Poppins-Thin';
+    color: #2F2B71;
+    font-size: 1.25rem;
+    font-weight: bolder;
+    line-height: 3;
+    letter-spacing: 0.235em;
+}
+
+.main-content h1 {
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 1;
+    letter-spacing: 0%;
+    color: #5F596E;
+    max-width: 700px;
+    margin-bottom: 25px;
+}
+
+.main-content p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1.8rem;
+}
+
+.apply-btn {
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+    background: #54B8FF;
+    color: #fff;
+    padding: 1.2rem 2.6rem;
+    font-weight: bold;
+}
+
+.right-arrow {
+    position: relative;
+    left: .4rem;
+}
+
+.all-shapes {
+    width: 100%;
+    height: 1000px;
+    background-image: url('../images/./Group-left.png'), url('../images/./Group-left-bottom.png'), url('../images/Group_1.png'), url('../images/Group_2.png'), url('../images/dot.png'), url('../images//yello.png'), url('../images/plus.png');
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: 30px, 100px, 35px, 45px, 70px, 200px, 200px;
+    background-position: left 15%, left 60%, right 20%, right 60%, 50% 15%, 40% 65%, 90% 100%;
+}
