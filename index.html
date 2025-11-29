@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./fav/developer.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Student Registration Form</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <form
+      action="/submit-registration"
+      method="post"
+      class="student-registration-form"
+    >
+      <div class="header-container">
+        <h1><strong>Student Registration Form</strong></h1>
+      </div>
+
+      <section class="info">
+        <h2>Please enter relevent information</h2>
+        <p>
+          <small class="mandatory-note text-gray-500">Mandatory Field*</small>
+        </p>
+      </section>
+
+      <!-- Main Grid Container for Form Fields (using Tailwind's flex/grid for responsiveness) -->
+      <div class="form-grid-container flex flex-wrap -mx-3">
+        <!-- LEFT COLUMN FIELDS (col-md-6) -->
+        <div class="left-column w-full md:w-1/2 px-3">
+          <!-- Institute District Selection -->
+          <div class="form-group district-group">
+            <label for="instituteDistrict">
+              District*
+              <small class="help-text">
+                (Institute District: Where you want to do your course)
+              </small>
+            </label>
+            <select id="instituteDistrict" name="instituteDistrict" required>
+              <option value="" disabled selected>--Select One--</option>
+              <!-- <optgroup label="Dhaka Division"> -->
+              <option value="dhaka">Dhaka</option>
+              <option value="faridpur">Faridpur</option>
+              <option value="gazipur">Gazipur</option>
+              <option value="gopalganj">Gopalganj</option>
+              <option value="kishoreganj">Kishoreganj</option>
+              <option value="madaripur">Madaripur</option>
+              <option value="manikganj">Manikganj</option>
+              <option value="munshiganj">Munshiganj</option>
+              <option value="narayanganj">Narayanganj</option>
+              <option value="narsingdi">Narsingdi</option>
+              <option value="rajbari">Rajbari</option>
+              <option value="shariatpur">Shariatpur</option>
+              <option value="tangail">Tangail</option>
+              <!-- </optgroup> -->
+              <!-- <optgroup label="Chattogram Division"> -->
+              <option value="bandarban">Bandarban</option>
+              <option value="brahmanbaria">Brahmanbaria</option>
+              <option value="chandpur">Chandpur</option>
+              <option value="chattogram">Chattogram</option>
+              <option value="coxsbazar">Cox's Bazar</option>
+              <option value="cumilla">Cumilla</option>
+              <option value="feni">Feni</option>
+              <option value="khagrachhari">Khagrachhari</option>
+              <option value="lakshmipur">Lakshmipur</option>
+              <option value="noakhali">Noakhali</option>
+              <option value="rangamati">Rangamati</option>
+
+              <!-- Khulna Division -->
+              <option value="bagerhat">Bagerhat</option>
+              <option value="chuadanga">Chuadanga</option>
+              <option value="jashore">Jashore</option>
+              <option value="jhenaidah">Jhenaidah</option>
+              <option value="khulna">Khulna</option>
+              <option value="kushtia">Kushtia</option>
+              <option value="magura">Magura</option>
+              <option value="meherpur">Meherpur</option>
+              <option value="narail">Narail</option>
+              <option value="satkhira">Satkhira</option>
+
+              <!-- Rajshahi Division -->
+              <option value="bogura">Bogura</option>
+              <option value="jaipurhat">Jaipurhat</option>
+              <option value="naogaon">Naogaon</option>
+              <option value="natore">Natore</option>
+              <option value="chapainawabganj">Chapai Nawabganj</option>
+              <option value="pabna">Pabna</option>
+              <option value="rajshahi">Rajshahi</option>
+              <option value="sirajganj">Sirajganj</option>
+
+              <!-- Rangpur Division -->
+              <option value="dinajpur">Dinajpur</option>
+              <option value="gaibandha">Gaibandha</option>
+              <option value="kurigram">Kurigram</option>
+              <option value="lalmonirhat">Lalmonirhat</option>
+              <option value="nilphamari">Nilphamari</option>
+              <option value="panchagarh">Panchagarh</option>
+              <option value="rangpur">Rangpur</option>
+              <option value="thakurgaon">Thakurgaon</option>
+
+              <!-- Barishal Division -->
+              <option value="barguna">Barguna</option>
+              <option value="barishal">Barishal</option>
+              <option value="bhola">Bhola</option>
+              <option value="jhalokati">Jhalokati</option>
+              <option value="patuakhali">Patuakhali</option>
+              <option value="pirojpur">Pirojpur</option>
+
+              <!-- Sylhet Division -->
+              <option value="habiganj">Habiganj</option>
+              <option value="moulvibazar">Moulvibazar</option>
+              <option value="sunamganj">Sunamganj</option>
+              <option value="sylhet">Sylhet</option>
+
+              <!-- Mymensingh Division -->
+              <option value="jamalpur">Jamalpur</option>
+              <option value="mymensingh">Mymensingh</option>
+              <option value="netrokona">Netrokona</option>
+              <option value="sherpur">Sherpur</option>
+              <!-- </optgroup> -->
+              <!-- ... other division optgroups omitted for brevity ... -->
+            </select>
+          </div>
+
+          <!-- Course Selection -->
+          <div class="form-group course-container">
+            <label for="course">Course*</label>
+            <select id="course" name="course">
+              <option value="" disabled selected>--Select One--</option>
+              <option value="wdd-2020-feb">
+                Web Design & Development - 2020 (2020, February)
+              </option>
+              <option value="gd-2020-feb">
+                Graphic Design - 2020 (2020, February)
+              </option>
+              <option value="dm-2020-feb">
+                Digital Marketing - 2020 (2020, February)
+              </option>
+            </select>
+          </div>
+
+          <!-- Student Name -->
+          <div class="form-group std-name">
+            <label for="studentName">Student Name*</label>
+            <input type="text" id="studentName" name="studentName" required />
+          </div>
+
+          <!-- Father Name -->
+          <div class="form-group father-name">
+            <label for="fatherName">Father Name*</label>
+            <input type="text" id="fatherName" name="fatherName" required />
+          </div>
+
+          <!-- Mother Name -->
+          <div class="form-group mother-name">
+            <label for="motherName">Mother Name*</label>
+            <input type="text" id="motherName" name="motherName" required />
+          </div>
+
+          <!-- Date of Birth -->
+          <div class="form-group dob">
+            <fieldset class="date-select-group">
+              <legend>Date of Birth*</legend>
+              <div class="date-select">
+                <!-- Day -->
+                <div class="date-part">
+                  <label for="day">Day</label>
+                  <select id="day" name="day" required>
+                    <option value="" disabled selected>Select</option>
+                    <!-- Abbreviated day options -->
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                  </select>
+                </div>
+
+                <!-- Month -->
+                <div class="date-part">
+                  <label for="month">Month</label>
+                  <select id="month" name="month" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                  </select>
+                </div>
+
+                <!-- Year -->
+                <div class="date-part">
+                  <label for="year">Year</label>
+                  <select id="year" name="year" required>
+                    <option value="" disabled selected>Select</option>
+                    <!-- Abbreviated year options -->
+                    <option value="1960">1960</option>
+                    <option value="1961">1961</option>
+                    <option value="1962">1962</option>
+                    <option value="1963">1963</option>
+                    <option value="1964">1964</option>
+                    <option value="1965">1965</option>
+                    <option value="1966">1966</option>
+                    <option value="1967">1967</option>
+                    <option value="1968">1968</option>
+                    <option value="1969">1969</option>
+                    <option value="1970">1970</option>
+                    <option value="1971">1971</option>
+                    <option value="1972">1972</option>
+                    <option value="1973">1973</option>
+                    <option value="1974">1974</option>
+                    <option value="1975">1975</option>
+                    <option value="1976">1976</option>
+                    <option value="1977">1977</option>
+                    <option value="1978">1978</option>
+                    <option value="1979">1979</option>
+                    <option value="1980">1980</option>
+                    <option value="1981">1981</option>
+                    <option value="1982">1982</option>
+                    <option value="1983">1983</option>
+                    <option value="1984">1984</option>
+                    <option value="1985">1985</option>
+                    <option value="1986">1986</option>
+                    <option value="1987">1987</option>
+                    <option value="1988">1988</option>
+                    <option value="1989">1989</option>
+                    <option value="1990">1990</option>
+                    <option value="1991">1991</option>
+                    <option value="1992">1992</option>
+                    <option value="1993">1993</option>
+                    <option value="1994">1994</option>
+                    <option value="1995">1995</option>
+                    <option value="1996">1996</option>
+                    <option value="1997">1997</option>
+                    <option value="1998">1998</option>
+                    <option value="1999">1999</option>
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <option value="2002">2002</option>
+                    <option value="2003">2003</option>
+                    <option value="2004">2004</option>
+                    <option value="2005">2005</option>
+                    <option value="2006">2006</option>
+                    <option value="2007">2007</option>
+                    <option value="2008">2008</option>
+                    <option value="2009">2009</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- Gender -->
+          <fieldset class="form-group radio-group gendertype">
+            <legend>Gender*</legend>
+            <div class="radio-option col-md-4">
+              <input
+                type="radio"
+                name="gender"
+                id="male"
+                value="male"
+                required
+              />
+              <label for="male">Male</label>
+            </div>
+            <div class="radio-option col-md-4">
+              <input
+                type="radio"
+                name="gender"
+                id="female"
+                value="female"
+                required
+              />
+              <label for="female">Female</label>
+            </div>
+          </fieldset>
+
+          <!-- Physically Handicapped -->
+          <fieldset class="form-group radio-group handicap">
+            <legend>Physically Handicapped*</legend>
+            <div class="radio-option col-md-4">
+              <input
+                type="radio"
+                name="ishandicapped"
+                id="handicapYes"
+                value="yes"
+                required
+              />
+              <label for="handicapYes">Yes</label>
+            </div>
+            <div class="radio-option col-md-4">
+              <input
+                type="radio"
+                name="ishandicapped"
+                id="handicapNo"
+                value="no"
+                required
+              />
+              <label for="handicapNo">No</label>
+            </div>
+          </fieldset>
+
+          <!-- Email -->
+          <div class="form-group mail">
+            <label for="email">Email*</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="example@mail.com"
+            />
+            <p class="help-text">e.g: example@mail.com</p>
+          </div>
+
+          <!-- Phone Number -->
+          <div class="form-group contact">
+            <label for="phone">Phone (Must be 11 Digits)*</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              pattern="[0-9]{11}"
+              maxlength="11"
+              placeholder="01XXXXXXXXX"
+            />
+            <p class="help-text">(e.g:0155123456)</p>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN FIELDS (col-md-6) -->
+        <div class="right-column w-full md:w-1/2 px-3">
+          <!-- Identification Type -->
+          <div class="form-group id-type">
+            <label for="identificationType">Identification Type*</label>
+            <select id="identificationType" name="identificationType" required>
+              <option value="" disabled selected>Select One</option>
+              <option value="birth-certificate">Birth Certificate No.</option>
+              <option value="national-id">National ID</option>
+            </select>
+          </div>
+
+          <!-- Identification Number -->
+          <div class="form-group id-number">
+            <label for="identificationNumber"
+              >Identification No. (Must be 10 digits for new NID or 17 digits
+              for old NID. If your National ID is 13 digits, then please add
+              your birth year with the ID as prefix. Example:
+              1980XXXXXXXXXXXXX)*</label
+            >
+            <input
+              type="text"
+              id="identificationNumber"
+              name="identificationNumber"
+              required
+              aria-describedby="id-help-text"
+              minlength="10"
+              maxlength="17"
+              pattern="[0-9]*"
+            />
+            <!-- <p id="id-help-text" class="help-text">
+              (Must be 10 digits for new NID or 17 digits for old NID. If your
+              National ID is 13 digits, please add your birth year as prefix.
+              Example: 1980XXXXXXXXXXXXX)
+            </p> -->
+          </div>
+
+          <!-- Home District -->
+          <div class="form-group home-district">
+            <label for="homeDistrict">Home District*</label>
+            <select id="instituteDistrict" name="instituteDistrict" required>
+              <option value="" disabled selected>Select One</option>
+              <!-- <optgroup label="Dhaka Division"> -->
+              <option value="dhaka">Dhaka</option>
+              <option value="faridpur">Faridpur</option>
+              <option value="gazipur">Gazipur</option>
+              <option value="gopalganj">Gopalganj</option>
+              <option value="kishoreganj">Kishoreganj</option>
+              <option value="madaripur">Madaripur</option>
+              <option value="manikganj">Manikganj</option>
+              <option value="munshiganj">Munshiganj</option>
+              <option value="narayanganj">Narayanganj</option>
+              <option value="narsingdi">Narsingdi</option>
+              <option value="rajbari">Rajbari</option>
+              <option value="shariatpur">Shariatpur</option>
+              <option value="tangail">Tangail</option>
+              <!-- </optgroup> -->
+              <!-- <optgroup label="Chattogram Division"> -->
+              <option value="bandarban">Bandarban</option>
+              <option value="brahmanbaria">Brahmanbaria</option>
+              <option value="chandpur">Chandpur</option>
+              <option value="chattogram">Chattogram</option>
+              <option value="coxsbazar">Cox's Bazar</option>
+              <option value="cumilla">Cumilla</option>
+              <option value="feni">Feni</option>
+              <option value="khagrachhari">Khagrachhari</option>
+              <option value="lakshmipur">Lakshmipur</option>
+              <option value="noakhali">Noakhali</option>
+              <option value="rangamati">Rangamati</option>
+
+              <!-- Khulna Division -->
+              <option value="bagerhat">Bagerhat</option>
+              <option value="chuadanga">Chuadanga</option>
+              <option value="jashore">Jashore</option>
+              <option value="jhenaidah">Jhenaidah</option>
+              <option value="khulna">Khulna</option>
+              <option value="kushtia">Kushtia</option>
+              <option value="magura">Magura</option>
+              <option value="meherpur">Meherpur</option>
+              <option value="narail">Narail</option>
+              <option value="satkhira">Satkhira</option>
+
+              <!-- Rajshahi Division -->
+              <option value="bogura">Bogura</option>
+              <option value="jaipurhat">Jaipurhat</option>
+              <option value="naogaon">Naogaon</option>
+              <option value="natore">Natore</option>
+              <option value="chapainawabganj">Chapai Nawabganj</option>
+              <option value="pabna">Pabna</option>
+              <option value="rajshahi">Rajshahi</option>
+              <option value="sirajganj">Sirajganj</option>
+
+              <!-- Rangpur Division -->
+              <option value="dinajpur">Dinajpur</option>
+              <option value="gaibandha">Gaibandha</option>
+              <option value="kurigram">Kurigram</option>
+              <option value="lalmonirhat">Lalmonirhat</option>
+              <option value="nilphamari">Nilphamari</option>
+              <option value="panchagarh">Panchagarh</option>
+              <option value="rangpur">Rangpur</option>
+              <option value="thakurgaon">Thakurgaon</option>
+
+              <!-- Barishal Division -->
+              <option value="barguna">Barguna</option>
+              <option value="barishal">Barishal</option>
+              <option value="bhola">Bhola</option>
+              <option value="jhalokati">Jhalokati</option>
+              <option value="patuakhali">Patuakhali</option>
+              <option value="pirojpur">Pirojpur</option>
+
+              <!-- Sylhet Division -->
+              <option value="habiganj">Habiganj</option>
+              <option value="moulvibazar">Moulvibazar</option>
+              <option value="sunamganj">Sunamganj</option>
+              <option value="sylhet">Sylhet</option>
+
+              <!-- Mymensingh Division -->
+              <option value="jamalpur">Jamalpur</option>
+              <option value="mymensingh">Mymensingh</option>
+              <option value="netrokona">Netrokona</option>
+              <option value="sherpur">Sherpur</option>
+              <!-- </optgroup> -->
+              <!-- ... other division optgroups omitted for brevity ... -->
+            </select>
+          </div>
+
+          <!-- Upazila (Dynamic/Grouped) -->
+          <div class="form-group upazila-group">
+            <label for="upazila">Upazila*</label>
+            <select id="upazila" name="upazila">
+              <option value="">Select One</option>
+              <optgroup label="Barguna District">
+                <option value="brg-amtali">Amtali</option>
+                <option value="brg-bamna">Bamna</option>
+                <option value="brg-bargunasadar">Barguna Sadar</option>
+                <option value="brg-betagi">Betagi</option>
+                <option value="brg-patharghata">Patharghata</option>
+                <option value="brg-taltali">Taltali</option>
+              </optgroup>
+              <optgroup label="Barishal District">
+                <option value="bsl-agailjhara">Agailjhara</option>
+                <option value="bsl-babuganj">Babuganj</option>
+                <option value="bsl-bakerganj">Bakerganj</option>
+                <option value="bsl-banaripara">Banaripara</option>
+                <option value="bsl-gaurnadi">Gaurnadi</option>
+                <option value="bsl-hizla">Hizla</option>
+                <option value="bsl-sadar">Barishal Sadar</option>
+                <option value="bsl-mehendiganj">Mehendiganj</option>
+                <option value="bsl-muladi">Muladi</option>
+                <option value="bsl-wazirpur">Wazirpur</option>
+              </optgroup>
+              <optgroup label="Bhola District">
+                <option value="bho-sadar">Bhola Sadar</option>
+                <option value="bho-burhanuddin">Burhanuddin</option>
+                <option value="bho-charfasson">Char Fasson</option>
+                <option value="bho-daulatkhan">Daulatkhan</option>
+                <option value="bho-lalmohan">Lalmohan</option>
+                <option value="bho-manpura">Manpura</option>
+                <option value="bho-tazumuddin">Tazumuddin</option>
+              </optgroup>
+              <optgroup label="Jhalokati District">
+                <option value="jkl-sadar">Jhalokati Sadar</option>
+                <option value="jkl-kathalia">Kathalia</option>
+                <option value="jkl-nalchity">Nalchity</option>
+                <option value="jkl-rajapur">Rajapur</option>
+              </optgroup>
+              <optgroup label="Patuakhali District">
+                <option value="ptk-bauphal">Bauphal</option>
+                <option value="ptk-dashmina">Dashmina</option>
+                <option value="ptk-galachipa">Galachipa</option>
+                <option value="ptk-kalapara">Kalapara</option>
+                <option value="ptk-mirzaganj">Mirzaganj</option>
+                <option value="ptk-sadar">Patuakhali Sadar</option>
+                <option value="ptk-rangabali">Rangabali</option>
+                <option value="ptk-dumki">Dumki</option>
+              </optgroup>
+              <optgroup label="Pirojpur District">
+                <option value="prj-bhandaria">Bhandaria</option>
+                <option value="prj-kawkhali">Kawkhali</option>
+                <option value="prj-mathbaria">Mathbaria</option>
+                <option value="prj-nazirpur">Nazirpur</option>
+                <option value="prj-sadar">Pirojpur Sadar</option>
+                <option value="prj-nesarabad">Nesarabad (Swarupkati)</option>
+                <option value="prj-indurkani">Indurkani (Zianagar)</option>
+              </optgroup>
+
+              <!-- ============================================== -->
+              <!-- CHATTOGRAM DIVISION -->
+              <!-- ============================================== -->
+              <optgroup label="Bandarban District">
+                <option value="bdr-alikadam">Ali Kadam</option>
+                <option value="bdr-sadar">Bandarban Sadar</option>
+                <option value="bdr-lama">Lama</option>
+                <option value="bdr-naikhongchhari">Naikhongchhari</option>
+                <option value="bdr-rowangchhari">Rowangchhari</option>
+                <option value="bdr-ruma">Ruma</option>
+                <option value="bdr-thanchi">Thanchi</option>
+              </optgroup>
+              <optgroup label="Brahmanbaria District">
+                <option value="bm-akhaura">Akhaura</option>
+                <option value="bm-ashuganj">Ashuganj</option>
+                <option value="bm-bancharampur">Bancharampur</option>
+                <option value="bm-sadar">Brahmanbaria Sadar</option>
+                <option value="bm-kasba">Kasba</option>
+                <option value="bm-nabinagar">Nabinagar</option>
+                <option value="bm-nasirnagar">Nasirnagar</option>
+                <option value="bm-sarail">Sarail</option>
+                <option value="bm-bijoynagar">Bijoynagar</option>
+              </optgroup>
+              <optgroup label="Chandpur District">
+                <option value="cdp-sadar">Chandpur Sadar</option>
+                <option value="cdp-faridganj">Faridganj</option>
+                <option value="cdp-haimchar">Haimchar</option>
+                <option value="cdp-haziganj">Haziganj</option>
+                <option value="cdp-kachua">Kachua</option>
+                <option value="cdp-matlabdakshin">Matlab Dakshin</option>
+                <option value="cdp-matlabuttar">Matlab Uttar</option>
+                <option value="cdp-shahrasti">Shahrasti</option>
+              </optgroup>
+              <optgroup label="Chattogram District">
+                <option value="ctg-anwara">Anwara</option>
+                <option value="ctg-banshkhali">Banshkhali</option>
+                <option value="ctg-boalkhali">Boalkhali</option>
+                <option value="ctg-chandanaish">Chandanaish</option>
+                <option value="ctg-fatikchhari">Fatikchhari</option>
+                <option value="ctg-hathazari">Hathazari</option>
+                <option value="ctg-lohogara">Lohagara</option>
+                <option value="ctg-mirsharai">Mirsharai</option>
+                <option value="ctg-patiya">Patiya</option>
+                <option value="ctg-rangunia">Rangunia</option>
+                <option value="ctg-raozan">Raozan</option>
+                <option value="ctg-sandwip">Sandwip</option>
+                <option value="ctg-satkania">Satkania</option>
+                <option value="ctg-sitakunda">Sitakunda</option>
+                <option value="ctg-karnaphuli">Karnaphuli</option>
+              </optgroup>
+              <optgroup label="Cumilla District">
+                <option value="cml-barura">Barura</option>
+                <option value="cml-brahmanpara">Brahmanpara</option>
+                <option value="cml-burichang">Burichang</option>
+                <option value="cml-chandina">Chandina</option>
+                <option value="cml-chauddagram">Chauddagram</option>
+                <option value="cml-daudkandi">Daudkandi</option>
+                <option value="cml-debidwar">Debidwar</option>
+                <option value="cml-homna">Homna</option>
+                <option value="cml-laksam">Laksam</option>
+                <option value="cml-muradnagar">Muradnagar</option>
+                <option value="cml-nangalkot">Nangalkot</option>
+                <option value="cml-cumillasadar">Cumilla Adarsha Sadar</option>
+                <option value="cml-meghna">Meghna</option>
+                <option value="cml-titas">Titas</option>
+                <option value="cml-monohargonj">Monohargonj</option>
+                <option value="cml-cumillasadardakshin">
+                  Cumilla Sadar Dakshin
+                </option>
+                <option value="cml-lalmai">Lalmai</option>
+              </optgroup>
+              <optgroup label="Cox's Bazar District">
+                <option value="cbz-chakaria">Chakaria</option>
+                <option value="cbz-sadar">Cox's Bazar Sadar</option>
+                <option value="cbz-kutubdia">Kutubdia</option>
+                <option value="cbz-maheshkhali">Maheshkhali</option>
+                <option value="cbz-pekua">Pekua</option>
+                <option value="cbz-ramu">Ramu</option>
+                <option value="cbz-teknaf">Teknaf</option>
+                <option value="cbz-ukhiya">Ukhiya</option>
+              </optgroup>
+              <optgroup label="Feni District">
+                <option value="fni-chagalenaiya">Chhagalnaiya</option>
+                <option value="fni-daganbhuiyan">Daganbhuiyan</option>
+                <option value="fni-sadar">Feni Sadar</option>
+                <option value="fni-parshuram">Parshuram</option>
+                <option value="fni-sonagazi">Sonagazi</option>
+                <option value="fni-fulgazi">Fulgazi</option>
+              </optgroup>
+              <optgroup label="Khagrachhari District">
+                <option value="kgr-dighinala">Dighinala</option>
+                <option value="kgr-sadar">Khagrachhari Sadar</option>
+                <option value="kgr-lakshmichhari">Lakshmichhari</option>
+                <option value="kgr-manikchhari">Manikchhari</option>
+                <option value="kgr-matiranga">Matiranga</option>
+                <option value="kgr-mohalchhari">Mohalchhari</option>
+                <option value="kgr-panchhari">Panchhari</option>
+                <option value="kgr-ramgarh">Ramgarh</option>
+                <option value="kgr-guimara">Guimara</option>
+              </optgroup>
+              <optgroup label="Lakshmipur District">
+                <option value="lxp-sadar">Lakshmipur Sadar</option>
+                <option value="lxp-raipur">Raipur</option>
+                <option value="lxp-ramganj">Ramganj</option>
+                <option value="lxp-ramgati">Ramgati</option>
+                <option value="lxp-kamalnagar">Kamalnagar</option>
+              </optgroup>
+              <optgroup label="Noakhali District">
+                <option value="nkh-begumganj">Begumganj</option>
+                <option value="nkh-chatkhil">Chatkhil</option>
+                <option value="nkh-companiganj">Companiganj</option>
+                <option value="nkh-hatiya">Hatiya</option>
+                <option value="nkh-kabirhat">Kabirhat</option>
+                <option value="nkh-sadar">Noakhali Sadar</option>
+                <option value="nkh-senbagh">Senbagh</option>
+                <option value="nkh-sonaimuri">Sonaimuri</option>
+                <option value="nkh-subarnachar">Subarnachar</option>
+              </optgroup>
+              <optgroup label="Rangamati District">
+                <option value="rng-bagaichhari">Bagaichhari</option>
+                <option value="rng-barkal">Barkal</option>
+                <option value="rng-belaichhari">Belaichhari</option>
+                <option value="rng-juraichhari">Juraichhari</option>
+                <option value="rng-kaptai">Kaptai</option>
+                <option value="rng-kawkhali">Kawkhali (Betbunia)</option>
+                <option value="rng-langadu">Langadu</option>
+                <option value="rng-naniyachar">Naniyachar</option>
+                <option value="rng-rajasthali">Rajasthali</option>
+                <option value="rng-sadar">Rangamati Sadar</option>
+              </optgroup>
+
+              <!-- ============================================== -->
+              <!-- DHAKA DIVISION -->
+              <!-- ============================================== -->
+              <optgroup label="Dhaka District">
+                <option value="dha-dhamrai">Dhamrai</option>
+                <option value="dha-dohar">Dohar</option>
+                <option value="dha-keraniganj">Keraniganj</option>
+                <option value="dha-nawabganj">Nawabganj</option>
+                <option value="dha-savar">Savar</option>
+              </optgroup>
+              <optgroup label="Faridpur District">
+                <option value="fdr-alfadanga">Alfadanga</option>
+                <option value="fdr-bhanga">Bhanga</option>
+                <option value="fdr-boalmari">Boalmari</option>
+                <option value="fdr-charbhadrasan">Charbhadrasan</option>
+                <option value="fdr-sadar">Faridpur Sadar</option>
+                <option value="fdr-madhukhali">Madhukhali</option>
+                <option value="fdr-nagarkanda">Nagarkanda</option>
+                <option value="fdr-sadarpur">Sadarpur</option>
+                <option value="fdr-saltha">Saltha</option>
+              </optgroup>
+              <optgroup label="Gazipur District">
+                <option value="gzp-sadar">Gazipur Sadar</option>
+                <option value="gzp-kaliakair">Kaliakair</option>
+                <option value="gzp-kaliganj">Kaliganj</option>
+                <option value="gzp-kapasia">Kapasia</option>
+                <option value="gzp-sreepur">Sreepur</option>
+              </optgroup>
+              <optgroup label="Gopalganj District">
+                <option value="gpg-sadar">Gopalganj Sadar</option>
+                <option value="gpg-kashiani">Kashiani</option>
+                <option value="gpg-kotalipara">Kotalipara</option>
+                <option value="gpg-muksudpur">Muksudpur</option>
+                <option value="gpg-tungipara">Tungipara</option>
+              </optgroup>
+              <optgroup label="Kishoreganj District">
+                <option value="ksg-austagram">Austagram</option>
+                <option value="ksg-bajitpur">Bajitpur</option>
+                <option value="ksg-bhairab">Bhairab</option>
+                <option value="ksg-hossainpur">Hossainpur</option>
+                <option value="ksg-itna">Itna</option>
+                <option value="ksg-karimganj">Karimganj</option>
+                <option value="ksg-katiadi">Katiadi</option>
+                <option value="ksg-sadar">Kishoreganj Sadar</option>
+                <option value="ksg-kuliarchar">Kuliarchar</option>
+                <option value="ksg-mithamain">Mithamain</option>
+                <option value="ksg-nikli">Nikli</option>
+                <option value="ksg-pakundia">Pakundia</option>
+                <option value="ksg-tarail">Tarail</option>
+              </optgroup>
+              <optgroup label="Madaripur District">
+                <option value="mdp-rajoir">Rajoir</option>
+                <option value="mdp-sadar">Madaripur Sadar</option>
+                <option value="mdp-kalkini">Kalkini</option>
+                <option value="mdp-shibchar">Shibchar</option>
+                <option value="mdp-dasar">Dasar</option>
+              </optgroup>
+              <optgroup label="Manikganj District">
+                <option value="mng-daulatpur">Daulatpur</option>
+                <option value="mng-ghior">Ghior</option>
+                <option value="mng-harirampur">Harirampur</option>
+                <option value="mng-sadar">Manikgonj Sadar</option>
+                <option value="mng-saturia">Saturia</option>
+                <option value="mng-shivalaya">Shivalaya</option>
+                <option value="mng-singair">Singair</option>
+              </optgroup>
+              <optgroup label="Munshiganj District">
+                <option value="msh-gazaria">Gazaria</option>
+                <option value="msh-lohajang">Lohajang</option>
+                <option value="msh-sadar">Munshiganj Sadar</option>
+                <option value="msh-sirajdikhan">Sirajdikhan</option>
+                <option value="msh-sreenagar">Sreenagar</option>
+                <option value="msh-tongibari">Tongibari</option>
+              </optgroup>
+              <optgroup label="Narayanganj District">
+                <option value="nrg-araihazar">Araihazar</option>
+                <option value="nrg-bandar">Bandar</option>
+                <option value="nrg-sadar">Narayanganj Sadar</option>
+                <option value="nrg-rupganj">Rupganj</option>
+                <option value="nrg-sonargaon">Sonargaon</option>
+              </optgroup>
+              <optgroup label="Narsingdi District">
+                <option value="nsg-belabo">Belabo</option>
+                <option value="nsg-monohardi">Monohardi</option>
+                <option value="nsg-sadar">Narsingdi Sadar</option>
+                <option value="nsg-palash">Palash</option>
+                <option value="nsg-raipura">Raipura</option>
+                <option value="nsg-shibpur">Shibpur</option>
+              </optgroup>
+              <optgroup label="Rajbari District">
+                <option value="rb-baliakandi">Baliakandi</option>
+                <option value="rb-goalunda">Goalunda</option>
+                <option value="rb-pangsha">Pangsha</option>
+                <option value="rb-sadar">Rajbari Sadar</option>
+                <option value="rb-kalukhali">Kalukhali</option>
+              </optgroup>
+              <optgroup label="Shariatpur District">
+                <option value="srt-bhedarganj">Bhedarganj</option>
+                <option value="srt-damudiya">Damudiya</option>
+                <option value="srt-gosairhat">Gosairhat</option>
+                <option value="srt-naria">Naria</option>
+                <option value="srt-sadar">Shariatpur Sadar</option>
+                <option value="srt-zajira">Zajira</option>
+              </optgroup>
+              <optgroup label="Tangail District">
+                <option value="tng-bashail">Bashail</option>
+                <option value="tng-bhuapur">Bhuapur</option>
+                <option value="tng-delduar">Delduar</option>
+                <option value="tng-ghatail">Ghatail</option>
+                <option value="tng-gopalpur">Gopalpur</option>
+                <option value="tng-kalihati">Kalihati</option>
+                <option value="tng-mirzapur">Mirzapur</option>
+                <option value="tng-modhupur">Modhupur</option>
+                <option value="tng-nagarpur">Nagarpur</option>
+                <option value="tng-shakhipur">Shakhipur</option>
+                <option value="tng-sadar">Tangail Sadar</option>
+                <option value="tng-dhanbari">Dhanbari</option>
+              </optgroup>
+
+              <!-- ============================================== -->
+              <!-- KHULNA DIVISION -->
+              <!-- ============================================== -->
+              <optgroup label="Bagerhat District">
+                <option value="bgh-sadar">Bagerhat Sadar</option>
+                <option value="bgh-chitalmari">Chitalmari</option>
+                <option value="bgh-fakirhat">Fakirhat</option>
+                <option value="bgh-kachua">Kachua</option>
+                <option value="bgh-mollahat">Mollahat</option>
+                <option value="bgh-mongla">Mongla</option>
+                <option value="bgh-morrelganj">Morrelganj</option>
+                <option value="bgh-rampal">Rampal</option>
+                <option value="bgh-sarankhola">Sarankhola</option>
+              </optgroup>
+              <optgroup label="Chuadanga District">
+                <option value="cnd-sadar">Chuadanga Sadar</option>
+                <option value="cnd-damurhuda">Damurhuda</option>
+                <option value="cnd-jibannagar">Jibannagar</option>
+                <option value="cnd-alamdanga">Alamdanga</option>
+              </optgroup>
+              <optgroup label="Jashore District">
+                <option value="jsr-abhaynagar">Abhaynagar</option>
+                <option value="jsr-bagherpara">Bagherpara</option>
+                <option value="jsr-chaugachha">Chaugachha</option>
+                <option value="jsr-sadar">Jashore Sadar</option>
+                <option value="jsr-jhikargachha">Jhikargachha</option>
+                <option value="jsr-keshabpur">Keshabpur</option>
+                <option value="jsr-manirampur">Manirampur</option>
+                <option value="jsr-sharsha">Sharsha</option>
+              </optgroup>
+              <optgroup label="Jhenaidah District">
+                <option value="jnh-harinakunda">Harinakunda</option>
+                <option value="jnh-sadar">Jhenaidah Sadar</option>
+                <option value="jnh-kaliganj">Kaliganj</option>
+                <option value="jnh-kotchandpur">Kotchandpur</option>
+                <option value="jnh-maheshpur">Maheshpur</option>
+                <option value="jnh-shailkupa">Shailkupa</option>
+              </optgroup>
+              <optgroup label="Khulna District">
+                <option value="khl-batiaghata">Batiaghata</option>
+                <option value="khl-dacope">Dacope</option>
+                <option value="khl-dighalia">Dighalia</option>
+                <option value="khl-dumuria">Dumuria</option>
+                <option value="khl-koyra">Koyra</option>
+                <option value="khl-paikgachha">Paikgachha</option>
+                <option value="khl-phultala">Phultala</option>
+                <option value="khl-rupsa">Rupsa</option>
+                <option value="khl-sadar">Khulna Sadar</option>
+              </optgroup>
+              <optgroup label="Kushtia District">
+                <option value="kst-bheramara">Bheramara</option>
+                <option value="kst-daulatpur">Daulatpur</option>
+                <option value="kst-khoksa">Khoksa</option>
+                <option value="kst-kumarkhali">Kumarkhali</option>
+                <option value="kst-sadar">Kushtia Sadar</option>
+                <option value="kst-mirpur">Mirpur</option>
+              </optgroup>
+              <optgroup label="Magura District">
+                <option value="mrg-sadar">Magura Sadar</option>
+                <option value="mrg-mohammadpur">Mohammadpur</option>
+                <option value="mrg-shalikha">Shalikha</option>
+                <option value="mrg-sreepur">Sreepur</option>
+              </optgroup>
+              <optgroup label="Meherpur District">
+                <option value="mhp-gangni">Gangni</option>
+                <option value="mhp-sadar">Meherpur Sadar</option>
+                <option value="mhp-mujibnagar">Mujibnagar</option>
+              </optgroup>
+              <optgroup label="Narail District">
+                <option value="nrl-kalia">Kalia</option>
+                <option value="nrl-lohagara">Lohagara</option>
+                <option value="nrl-sadar">Narail Sadar</option>
+              </optgroup>
+              <optgroup label="Satkhira District">
+                <option value="stk-assasuni">Assasuni</option>
+                <option value="stk-debhata">Debhata</option>
+                <option value="stk-kalaroa">Kalaroa</option>
+                <option value="stk-kaliganj">Kaliganj</option>
+                <option value="stk-sadar">Satkhira Sadar</option>
+                <option value="stk-shyamnagar">Shyamnagar</option>
+                <option value="stk-tala">Tala</option>
+              </optgroup>
+
+              <!-- ============================================== -->
+              <!-- MYMENSINGH DIVISION -->
+              <!-- ============================================== -->
+              <optgroup label="Jamalpur District">
+                <option value="jml-baksiganj">Baksiganj</option>
+                <option value="jml-dewanganj">Dewanganj</option>
+                <option value="jml-islampur">Islampur</option>
+                <option value="jml-sadar">Jamalpur Sadar</option>
+                <option value="jml-madarganj">Madarganj</option>
+                <option value="jml-melandaha">Melandaha</option>
+                <option value="jml-sarishabari">Sarishabari</option>
+              </optgroup>
+              <optgroup label="Mymensingh District">
+                <option value="mym-bhaluka">Bhaluka</option>
+                <option value="mym-dhobaura">Dhobaura</option>
+                <option value="mym-fulbaria">Fulbaria</option>
+                <option value="mym-fulpur">Fulpur</option>
+                <option value="mym-gaffargaon">Gaffargaon</option>
+                <option value="mym-gouripur">Gouripur</option>
+                <option value="mym-haluaghat">Haluaghat</option>
+                <option value="mym-iswarganj">Iswarganj</option>
+                <option value="mym-sadar">Mymensingh Sadar</option>
+                <option value="mym-muktagachha">Muktagachha</option>
+                <option value="mym-nandail">Nandail</option>
+                <option value="mym-tarakanda">Tarakanda</option>
+                <option value="mym-trishal">Trishal</option>
+              </optgroup>
+              <optgroup label="Netrokona District">
+                <option value="ntr-atpara">Atpara</option>
+                <option value="ntr-barhatta">Barhatta</option>
+                <option value="ntr-durgapur">Durgapur</option>
+                <option value="ntr-kalmakanda">Kalmakanda</option>
+                <option value="ntr-kendua">Kendua</option>
+                <option value="ntr-khaliajuri">Khaliajuri</option>
+                <option value="ntr-madan">Madan</option>
+                <option value="ntr-mohanganj">Mohanganj</option>
+                <option value="ntr-sadar">Netrokona Sadar</option>
+                <option value="ntr-purbadhala">Purbadhala</option>
+              </optgroup>
+              <optgroup label="Sherpur District">
+                <option value="shr-jhenaigati">Jhenaigati</option>
+                <option value="shr-nakla">Nakla</option>
+                <option value="shr-nalitabari">Nalitabari</option>
+                <option value="shr-sadar">Sherpur Sadar</option>
+                <option value="shr-sreebardi">Sreebardi</option>
+              </optgroup>
+
+              <!-- ============================================== -->
+              <!-- RAJSHAHI DIVISION -->
+              <!-- ============================================== -->
+              <optgroup label="Bogura District">
+                <option value="bgr-adamdighi">Adamdighi</option>
+                <option value="bgr-sadar">Bogura Sadar</option>
+                <option value="bgr-dhunat">Dhunat</option>
+                <option value="bgr-dhupchanchia">Dhupchanchia</option>
+                <option value="bgr-gabtali">Gabtali</option>
+                <option value="bgr-kahaloo">Kahaloo</option>
+                <option value="bgr-nandigram">Nandigram</option>
+                <option value="bgr-sariakandi">Sariakandi</option>
+                <option value="bgr-shahjahanpur">Shahjahanpur</option>
+                <option value="bgr-sherpur">Sherpur</option>
+                <option value="bgr-shibganj">Shibganj</option>
+                <option value="bgr-sonatola">Sonatola</option>
+              </optgroup>
+              <optgroup label="Chapai Nawabganj District">
+                <option value="cnj-bholahat">Bholahat</option>
+                <option value="cnj-gomastapur">Gomastapur</option>
+                <option value="cnj-nachole">Nachole</option>
+                <option value="cnj-sadar">Chapai Nawabganj Sadar</option>
+                <option value="cnj-shibganj">Shibganj</option>
+              </optgroup>
+              <optgroup label="Joypurhat District">
+                <option value="jph-akkelpur">Akkelpur</option>
+                <option value="jph-sadar">Joypurhat Sadar</option>
+                <option value="jph-kalai">Kalai</option>
+                <option value="jph-khetlal">Khetlal</option>
+                <option value="jph-panchbibi">Panchbibi</option>
+              </optgroup>
+              <optgroup label="Naogaon District">
+                <option value="nga-atrai">Atrai</option>
+                <option value="nga-badalgachhi">Badalgachhi</option>
+                <option value="nga-dhamoirhat">Dhamoirhat</option>
+                <option value="nga-mahadevpur">Mahadevpur</option>
+                <option value="nga-manda">Manda</option>
+                <option value="nga-sadar">Naogaon Sadar</option>
+                <option value="nga-niamatpur">Niamatpur</option>
+                <option value="nga-patnitala">Patnitala</option>
+                <option value="nga-porsha">Porsha</option>
+                <option value="nga-raninagar">Raninagar</option>
+                <option value="nga-sapahar">Sapahar</option>
+              </optgroup>
+              <optgroup label="Natore District">
+                <option value="ntr-bagatipara">Bagatipara</option>
+                <option value="ntr-baraigram">Baraigram</option>
+                <option value="ntr-gurudaspur">Gurudaspur</option>
+                <option value="ntr-lalpur">Lalpur</option>
+                <option value="ntr-sadar">Natore Sadar</option>
+                <option value="ntr-singra">Singra</option>
+                <option value="ntr-naldanga">Naldanga</option>
+              </optgroup>
+              <optgroup label="Pabna District">
+                <option value="pbn-ataikula">Ataikula</option>
+                <option value="pbn-atgharia">Atgharia</option>
+                <option value="pbn-bera">Bera</option>
+                <option value="pbn-bhangura">Bhangura</option>
+                <option value="pbn-chatmohar">Chatmohar</option>
+                <option value="pbn-faridpur">Faridpur</option>
+                <option value="pbn-ishwardi">Ishwardi</option>
+                <option value="pbn-sadar">Pabna Sadar</option>
+                <option value="pbn-santhia">Santhia</option>
+                <option value="pbn-sujanagar">Sujanagar</option>
+              </optgroup>
+              <optgroup label="Rajshahi District">
+                <option value="rsh-bagha">Bagha</option>
+                <option value="rsh-bagmara">Bagmara</option>
+                <option value="rsh-charghat">Charghat</option>
+                <option value="rsh-durgapur">Durgapur</option>
+                <option value="rsh-godagari">Godagari</option>
+                <option value="rsh-mohanpur">Mohanpur</option>
+                <option value="rsh-paba">Paba</option>
+                <option value="rsh-puthia">Puthia</option>
+                <option value="rsh-tanore">Tanore</option>
+              </optgroup>
+              <optgroup label="Sirajganj District">
+                <option value="srg-belkuchi">Belkuchi</option>
+                <option value="srg-chauhali">Chauhali</option>
+                <option value="srg-kamarkhanda">Kamarkhanda</option>
+                <option value="srg-kazipur">Kazipur</option>
+                <option value="srg-raiganj">Raiganj</option>
+                <option value="srg-shahjadpur">Shahjadpur</option>
+                <option value="srg-sadar">Sirajganj Sadar</option>
+                <option value="srg-tarash">Tarash</option>
+                <option value="srg-ullahpara">Ullahpara</option>
+              </optgroup>
+
+              <!-- ============================================== -->
+              <!-- RANGPUR DIVISION -->
+              <!-- ============================================== -->
+              <optgroup label="Dinajpur District">
+                <option value="dnj-birampur">Birampur</option>
+                <option value="dnj-birganj">Birganj</option>
+                <option value="dnj-biral">Biral</option>
+                <option value="dnj-bochaganj">Bochaganj</option>
+                <option value="dnj-chirirbandar">Chirirbandar</option>
+                <option value="dnj-phulbari">Phulbari</option>
+                <option value="dnj-ghoraghat">Ghoraghat</option>
+                <option value="dnj-hakimpur">Hakimpur</option>
+                <option value="dnj-kaharole">Kaharole</option>
+                <option value="dnj-khansama">Khansama</option>
+                <option value="dnj-sadar">Dinajpur Sadar</option>
+                <option value="dnj-nawabganj">Nawabganj</option>
+                <option value="dnj-parbatipur">Parbatipur</option>
+              </optgroup>
+              <optgroup label="Gaibandha District">
+                <option value="gai-phulchhari">Phulchhari</option>
+                <option value="gai-sadar">Gaibandha Sadar</option>
+                <option value="gai-gobindaganj">Gobindaganj</option>
+                <option value="gai-palashbari">Palashbari</option>
+                <option value="gai-sadullapur">Sadullapur</option>
+                <option value="gai-sughatta">Sughatta</option>
+                <option value="gai-sundarganj">Sundarganj</option>
+              </optgroup>
+              <optgroup label="Kurigram District">
+                <option value="krm-bhurungamari">Bhurungamari</option>
+                <option value="krm-charrajibpur">Char Rajibpur</option>
+                <option value="krm-chilmari">Chilmari</option>
+                <option value="krm-phulbari">Phulbari</option>
+                <option value="krm-sadar">Kurigram Sadar</option>
+                <option value="krm-nageshwari">Nageshwari</option>
+                <option value="krm-rajarhat">Rajarhat</option>
+                <option value="krm-raomari">Raomari</option>
+                <option value="krm-ulipur">Ulipur</option>
+              </optgroup>
+              <optgroup label="Lalmonirhat District">
+                <option value="lmr-aditmari">Aditmari</option>
+                <option value="lmr-hatibandha">Hatibandha</option>
+                <option value="lmr-kaliganj">Kaliganj</option>
+                <option value="lmr-sadar">Lalmonirhat Sadar</option>
+                <option value="lmr-patgram">Patgram</option>
+              </optgroup>
+              <optgroup label="Nilphamari District">
+                <option value="nlm-dimla">Dimla</option>
+                <option value="nlm-domar">Domar</option>
+                <option value="nlm-jaldhaka">Jaldhaka</option>
+                <option value="nlm-kishoreganj">Kishoreganj</option>
+                <option value="nlm-sadar">Nilphamari Sadar</option>
+                <option value="nlm-saidpur">Saidpur</option>
+              </optgroup>
+              <optgroup label="Panchagarh District">
+                <option value="png-atwari">Atwari</option>
+                <option value="png-boda">Boda</option>
+                <option value="png-debiganj">Debiganj</option>
+                <option value="png-sadar">Panchagarh Sadar</option>
+                <option value="png-tetulia">Tetulia</option>
+              </optgroup>
+              <optgroup label="Rangpur District">
+                <option value="rng-badarganj">Badarganj</option>
+                <option value="rng-gangachhara">Gangachhara</option>
+                <option value="rng-kaunia">Kaunia</option>
+                <option value="rng-sadar">Rangpur Sadar</option>
+                <option value="rng-mithapukur">Mithapukur</option>
+                <option value="rng-pirgachha">Pirgachha</option>
+                <option value="rng-pirganj">Pirganj</option>
+                <option value="rng-taraganj">Taraganj</option>
+              </optgroup>
+              <optgroup label="Thakurgaon District">
+                <option value="tkg-baliadangi">Baliadangi</option>
+                <option value="tkg-haripur">Haripur</option>
+                <option value="tkg-pirganj">Pirganj</option>
+                <option value="tkg-ranisankail">Ranisankail</option>
+                <option value="tkg-sadar">Thakurgaon Sadar</option>
+              </optgroup>
+
+              <!-- ============================================== -->
+              <!-- SYLHET DIVISION -->
+              <!-- ============================================== -->
+              <optgroup label="Habiganj District">
+                <option value="hbg-ajmiriganj">Ajmiriganj</option>
+                <option value="hbg-bahubal">Bahubal</option>
+                <option value="hbg-baniyachong">Baniyachong</option>
+                <option value="hbg-chunarughat">Chunarughat</option>
+                <option value="hbg-sadar">Habiganj Sadar</option>
+                <option value="hbg-lakhai">Lakhai</option>
+                <option value="hbg-madhabpur">Madhabpur</option>
+                <option value="hbg-nabiganj">Nabiganj</option>
+                <option value="hbg-shayestaganj">Shayestaganj</option>
+              </optgroup>
+              <optgroup label="Moulvibazar District">
+                <option value="mlv-barlekha">Barlekha</option>
+                <option value="mlv-kamalganj">Kamalganj</option>
+                <option value="mlv-kulaura">Kulaura</option>
+                <option value="mlv-sadar">Moulvibazar Sadar</option>
+                <option value="mlv-rajnagar">Rajnagar</option>
+                <option value="mlv-sreemangal">Sreemangal</option>
+                <option value="mlv-juri">Juri</option>
+              </optgroup>
+              <optgroup label="Sunamganj District">
+                <option value="sng-bishwambarpur">Bishwambarpur</option>
+                <option value="sng-chhatak">Chhatak</option>
+                <option value="sng-derai">Derai</option>
+                <option value="sng-dharampasha">Dharampasha</option>
+                <option value="sng-dowarabazar">Dowarabazar</option>
+                <option value="sng-jagannathpur">Jagannathpur</option>
+                <option value="sng-jamalganj">Jamalganj</option>
+                <option value="sng-maddhyanagar">Maddhyanagar</option>
+                <option value="sng-sullah">Sullah</option>
+                <option value="sng-sadar">Sunamganj Sadar</option>
+                <option value="sng-tahirpur">Tahirpur</option>
+                <option value="sng-shantiganj">
+                  Shantiganj (South Sunamganj)
+                </option>
+              </optgroup>
+              <optgroup label="Sylhet District">
+                <option value="slt-balaganj">Balaganj</option>
+                <option value="slt-beanibazar">Beanibazar</option>
+                <option value="slt-bishwanath">Bishwanath</option>
+                <option value="slt-companiganj">Companiganj</option>
+                <option value="slt-fenchuganj">Fenchuganj</option>
+                <option value="slt-golapganj">Golapganj</option>
+                <option value="slt-gowainghat">Gowainghat</option>
+                <option value="slt-jaintiapur">Jaintiapur</option>
+                <option value="slt-kanaighat">Kanaighat</option>
+                <option value="slt-sadar">Sylhet Sadar</option>
+                <option value="slt-zajiganj">Zakiganj</option>
+                <option value="slt-southsurma">South Surma</option>
+                <option value="slt-osmaninagar">Osmaninagar</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <!-- Permanent Address / Village/House/Road No. -->
+          <div class="form-group address-detail">
+            <label for="addressDetail"
+              >Village/House No./Road No./Other Alternative*</label
+            >
+            <input
+              type="text"
+              id="addressDetail"
+              name="addressDetail"
+              required
+            />
+          </div>
+
+          <!-- Post Office -->
+          <div class="form-group post-office">
+            <label for="postOffice">Post Office*</label>
+            <input type="text" id="postOffice" name="postOffice" required />
+          </div>
+
+          <!-- Educational Qualification -->
+          <div class="form-group educational-qualification">
+            <label for="qualification">
+              Educational Qualification*
+              <span class="help-text">(Higher Level)</span>
+            </label>
+            <select id="qualification" name="qualification" required>
+              <option value="" disabled selected>--Select One--</option>
+              <option value="hsc">Higher Secondary/Equivalent</option>
+              <option value="bachelor">Bachelor</option>
+              <option value="master">Master</option>
+              <option value="phd">Phd</option>
+            </select>
+          </div>
+
+          <!-- Have Computer? (Radio Group) -->
+          <fieldset class="form-group radio-group computer-ownership">
+            <legend>Have any computer?*</legend>
+            <div class="radio-option col-md-4">
+              <input
+                type="radio"
+                name="haveComputer"
+                id="computerYes"
+                value="yes"
+                required
+              />
+              <label for="computerYes">Yes</label>
+            </div>
+            <div class="radio-option col-md-4">
+              <input
+                type="radio"
+                name="haveComputer"
+                id="computerNo"
+                value="no"
+                required
+              />
+              <label for="computerNo">No</label>
+            </div>
+          </fieldset>
+
+          <!-- Photograph Upload -->
+          <div class="form-group photograph-upload">
+            <label for="photograph">Photograph*</label>
+            <input
+              type="file"
+              id="photograph"
+              name="photograph"
+              required
+              accept=".jpg, .jpeg, .png"
+              aria-describedby="photo-help"
+            />
+            <p id="photo-help" class="help-text">
+              (File type must be jpg, jpeg, or png. Maximum file size 2 mb.)
+            </p>
+          </div>
+
+          <!-- Signature Upload -->
+          <div class="form-group signature-upload">
+            <label for="signature">Signature*</label>
+            <input
+              type="file"
+              id="signature"
+              name="signature"
+              required
+              accept=".jpg, .jpeg, .png"
+              aria-describedby="signature-help"
+            />
+            <p id="signature-help" class="help-text">
+              (File type must be jpg, jpeg, or png. Maximum file size 2 mb.)
+            </p>
+          </div>
+        </div>
+        <!-- END Right Column -->
+      </div>
+      <!-- END Form Grid Container -->
+
+      <!-- Submit Button -->
+      <div class="form-group submit-button-container w-full">
+        <button type="submit" class="btn-primary">Submit Data</button>
+      </div>
+    </form>
+  </body>
+</html>

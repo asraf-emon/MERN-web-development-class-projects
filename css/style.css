@@ -1,0 +1,178 @@
+/* Define custom color variables for consistency */
+:root {
+  --primary-color: #10b981; /* Emerald 500 */
+  --secondary-color: #3b82f6; /* Blue 500 */
+  --text-color: #4c535e; /* Gray 800 */
+  --bg-color: #f9fafb; /* Gray 50 */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  line-height: 1.6;
+}
+
+.student-registration-form {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background: white;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.header-container {
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label,
+.form-group legend {
+  display: block;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.form-group input:not([type="radio"]),
+.form-group select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db; /* Gray 300 */
+  border-radius: 6px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3); /* Blue 300 shadow */
+}
+
+.help-text {
+  font-size: 0.85rem;
+  color: #6b7280; /* Gray 500 */
+  margin-top: 4px;
+}
+
+/* Radio Button Styling */
+.radio-group {
+  padding: 15px 10px 10px;
+  border: 1px solid #e5e7eb; /* Gray 200 */
+  border-radius: 8px;
+}
+
+.radio-group legend {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0 10px;
+  width: auto;
+}
+
+.radio-option {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.radio-option input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+
+/* Date Select Styling (Optimized) */
+.form-group.dob .date-select-group {
+  border: 1px solid #d1d5db;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.form-group.dob .date-select-group legend {
+  font-weight: 600;
+  color: var(--text-color);
+}
+.form-group.dob .date-select {
+  display: flex;
+  gap: 15px; 
+  margin-top: 10px;
+}
+.form-group.dob .date-select .date-part {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  flex-grow: 1;
+}
+.form-group.dob .date-select label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-size: 0.85rem;
+  color: #4b5563; /* Gray 600 */
+}
+.form-group.dob .date-select select {
+  width: 100%;
+  padding: 8px;
+}
+
+/* Submit Button */
+.submit-button-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-primary:hover {
+  background-color: #059669; /* Emerald 600 */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(16, 185, 129, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .student-registration-form {
+      margin: 20px 10px;
+      padding: 20px;
+    }
+    .form-grid-container {
+      flex-direction: column;
+    }
+    .left-column, .right-column {
+      width: 100%;
+      padding: 0;
+    }
+    .form-group.dob .date-select {
+      gap: 10px; /* Tighter gap on smaller screens */
+    }
+}
