@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./fav/developer.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/singlePageMenu.css" />
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <title>Single Page Menu</title>
+  </head>
+  <body>
+    <nav>
+      <a href="#about-us" title="About Us"><i class="far fa-user"></i></a>
+      <a href="#portfolio" title="Portfolio"
+        ><i class="fas fa-briefcase"></i
+      ></a>
+      <a href="#product" title="Product"
+        ><i class="fa-brands fa-product-hunt"></i
+      ></a>
+      <a href="#support" title="Support"><i class="far fa-address-card"></i></a>
+    </nav>
+
+    <div class="container">
+      <section id="about-us">
+        <h1>About Us</h1>
+      </section>
+
+      <section id="portfolio">
+        <h1>Portfolio</h1>
+      </section>
+
+      <section id="product">
+        <h1>Product</h1>
+      </section>
+
+      <section id="support">
+        <h1>Support</h1>
+      </section>
+    </div>
+
+    <script>
+      const searchBtn = document.getElementById("search-btn");
+      const searchBox = document.getElementById("search-box");
+
+      searchBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        searchBox.style.display =
+          searchBox.style.display === "block" ? "none" : "block";
+      });
+    </script>
+  </body>
+</html>
