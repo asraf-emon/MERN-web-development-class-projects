@@ -1,0 +1,64 @@
+ body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.content-container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the image */
+}
+
+h1, h2 {
+    color: #555;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 30px;
+}
+p {
+    margin-bottom: 20px;
+    text-align: left; /* Keep paragraphs left-aligned */
+}
+
+img.profile-photo {
+    max-width: 200px;
+    border-radius: 50%; /* Makes the image circular */
+    margin: 20px auto;
+    display: block;
+}
+
+/* New CSS for the skills table */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    text-align: left;
+}
+.skills-table th, .skills-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+.skills-table th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+/* Style for the back link */
+.back-link {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
