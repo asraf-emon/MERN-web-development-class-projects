@@ -1,0 +1,257 @@
+* {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar Section */
+.logo-img {
+    width: 100px;
+}
+
+/* Hero Section */
+.hero-container {
+    background-image: url(../assets/images/page-title.jpg);
+    height: 450px;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.motto {
+    font-size: 56px;
+    line-height: 64px;
+    font-weight: 600;
+    color: white;
+    padding: 0 15px;
+}
+
+/* Search Section */
+.input-field {
+    border: 1.3px solid rgba(0,0,0,0.1);
+    border-right: none; 
+    border-radius: 8px 0 0 8px !important; 
+    height: 45px; 
+    padding-left: 1rem !important; 
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; 
+}
+
+.search-input {
+    padding-right: 0 !important; 
+}
+
+.search-icon-box {
+    background: #ffa500;
+    width: 50px; 
+    height: 45px; 
+    border-radius: 0 8px 8px 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Recipe Section */
+.recipe-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.5rem;
+    display: flex; 
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.view-details-btn {
+    background-color: #ffa500;
+    border-color: #ffa500;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-left: auto; 
+    margin-top: auto;
+}
+
+.view-details-btn:hover {
+    background-color: #cc8400; 
+    border-color: #cc8400;
+    color: white;
+}
+
+/* Footer Section */
+footer {
+    background-color: #3D4451;
+}
+.footer-icon {
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+
+.footer-icon:hover {
+    color: #ffa500 !important; 
+}
+
+.footer p {
+    line-height: 1.5;
+}
+/* Scroll to Top Section */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    transition: opacity 0.3s;
+}
+
+.progress-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg); 
+}
+
+.progress-ring-progress {
+    stroke: #ffa500; 
+    transition: stroke-dashoffset 0.1s linear; 
+}
+
+.button-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-icon {
+    font-size: 18px;
+    color: #ffa500;
+    display: none;
+}
+
+.percentage-text {
+    font-size: 10px;
+    color: #ffa500;
+    font-weight: bold;
+}
+
+#scrollToTopBtn:hover .percentage-text {
+    display: none;
+}
+#scrollToTopBtn:hover .scroll-icon {
+    display: block;
+}
+
+/* Mobile Devices (max-width: 576px) */
+@media (max-width: 576px) {
+    .motto {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    .hero-container {
+        height: 300px;
+    }
+    
+    .input-wrapper {
+        width: 90%; 
+    }
+    
+    #scrollToTopBtn {
+        width: 45px;
+        height: 45px;
+        bottom: 15px;
+        right: 15px;
+    }
+    .progress-ring {
+        width: 45px;
+        height: 45px;
+    }
+
+    .progress-ring circle {
+        r: 21;
+        cx: 22.5;
+        cy: 22.5;
+    }
+    
+    .scroll-icon {
+        font-size: 14px;
+    }
+    .percentage-text {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .motto {
+        font-size: 40px;
+        line-height: 48px;
+    }
+    
+    .card-title {
+        font-size: 1.25rem;
+    }
+    
+    .card-img-top {
+        height: 180px;
+    }
+}
+
+@media (max-width: 992px) {
+    .motto {
+        font-size: 48px;
+        line-height: 56px;
+    }
+}
