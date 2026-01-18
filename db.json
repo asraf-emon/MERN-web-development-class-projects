@@ -1,0 +1,49 @@
+{
+  "contacts": [
+    {
+      "id": "1",
+      "first_name": "Alfred",
+      "last_name": "Kuhlman",
+      "email": "alfred@test.com",
+      "phone": "98989898",
+      "address": "USA",
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "1768713503585",
+      "first_name": "Frederick",
+      "last_name": "Jerde",
+      "email": "frederick@test.com",
+      "phone": "54545454",
+      "address": "Canada",
+      "createdAt": 1768713503585
+    },
+    {
+      "id": "1768713535686",
+      "first_name": "Joannie",
+      "last_name": "McLaughlin",
+      "email": "joannie@test.com",
+      "phone": "75757575",
+      "address": "Russia",
+      "createdAt": 1768713535686
+    },
+    {
+      "id": "1768713585174",
+      "first_name": "Odie",
+      "last_name": "Koss",
+      "email": "odie@test.com",
+      "phone": "64646464",
+      "address": "France",
+      "createdAt": 1768713585174
+    },
+    {
+      "id": "1768713631126",
+      "first_name": "Edna",
+      "last_name": "Ondricka",
+      "email": "edna@test.com",
+      "phone": "58595858",
+      "address": "Germany",
+      "createdAt": 1768713631126
+    }
+  ]
+}
