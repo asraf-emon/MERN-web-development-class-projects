@@ -1,16 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter as Router } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
-import { ContactProvider } from "./context/ContactContext";
-import App from "./App";
-import "react-toastify/dist/ReactToastify.css";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import "./index.css";
+import "react-toastify/dist/ReactToastify.css";
+import App from "./App.jsx";
+import { BrowserRouter } from "react-router-dom";
+import { ContactProvider } from "./context/ContactContext.jsx";
+import { ToastContainer } from "react-toastify";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
     <ContactProvider>
-      <Router>
+      <BrowserRouter>
         <App />
         <ToastContainer
           position="bottom-right"
@@ -18,7 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           theme="colored"
           pauseOnHover={false}
         />
-      </Router>
+      </BrowserRouter>
     </ContactProvider>
-  </React.StrictMode>
+  </StrictMode>,
 );
