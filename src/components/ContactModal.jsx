@@ -13,7 +13,7 @@ const ContactModal = ({ isOpen, onClose, contact, mode }) => {
 
   if (!isOpen) return null;
 
-  // সব ইনপুটের জন্য একটি কমন হ্যান্ডলার ফাংশন
+  
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -27,7 +27,7 @@ const ContactModal = ({ isOpen, onClose, contact, mode }) => {
   return (
     <div className="fixed inset-0 bg-black/50 flex justify-center items-center z-50 p-4 backdrop-blur-sm">
       <div className="bg-white rounded-lg w-full max-w-lg shadow-2xl overflow-hidden">
-        {/* মোডাল হেডার */}
+        
         <div className="bg-slate-700 p-4 text-white flex justify-between items-center">
           <h3 className="font-bold text-lg">
             {mode === "edit" ? "Edit Contact" : "Contact Details"}
@@ -43,7 +43,7 @@ const ContactModal = ({ isOpen, onClose, contact, mode }) => {
         <div className="p-6">
           {mode === "edit" ? (
             <form onSubmit={handleSubmit} className="space-y-4">
-              {/* input ফিল্ডগুলো name অ্যাট্রিবিউট সহ */}
+              
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="text-xs font-bold text-gray-500 uppercase">
@@ -138,7 +138,6 @@ const ContactModal = ({ isOpen, onClose, contact, mode }) => {
   );
 };
 
-// ডাটা দেখানোর জন্য ছোট হেল্পার কম্পোনেন্ট
 const DetailItem = ({ label, value }) => (
   <p className="border-b pb-2">
     <strong className="text-gray-500 text-sm uppercase">{label}:</strong> <br />
